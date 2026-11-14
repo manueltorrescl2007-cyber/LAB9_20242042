@@ -30,7 +30,7 @@ public class LogServlet {
         view.forward(request,response);
 
     }
-    @Override
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException{
         request.setCharacterEncoding("UTF-8");

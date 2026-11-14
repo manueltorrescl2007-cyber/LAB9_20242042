@@ -26,8 +26,10 @@ public class Libros extends HttpServlet{
             return;
         }
         LibroDao libroDao = new LibroDao();
-        ArrayList<Libro> lista = libroDao.lista();
+        ArrayList<Libro> lista = libroDao.listar();
         request.setAttribute("lista",lista);
+        RequestDispatcher view = request.getRequestDispatcher("listaLibros.jsp");
+        view.forward(request,response);
 
 
     }
